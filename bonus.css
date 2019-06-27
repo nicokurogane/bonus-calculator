@@ -1,0 +1,12 @@
+.calculator-container{
+    margin: 10vh 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.answer-container{
+    display: flex;
+    justify-content: center;
+}

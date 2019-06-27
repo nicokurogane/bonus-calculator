@@ -5,19 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="bonus.css">
+    <title>Bonus Exercise</title>
 </head>
 
 <body>
     <div class="calculator-container">
         <h1>Bonus Calculator</h1>
-        <form>
-            <input type="number" name="salary" id="salary"><br/><br/>
-            <input type="number" name="years" id="years"><br/><br/>
-            <input type="number" name="days" id="days"><br/><br/>
-         <input type="submit" value="Calculate">
+        <h3></h3>
+        <form id='bonus-form'>
+            <input type="number" name="salary" id="salary" placeholder="Salary">
+            <input type="number" name="years" id="years" placeholder="Years">
+            <input type="number" name="days" id="days" placeholder="Days">
+            <input type="submit" class="btn btn-primary" value="Calculate">
         </form>
     </div>
+    <div id='result-container' class="answer-container">
+        
+    </div>
+
+    <script src="bonus.js"></script>
 </body>
 
 </html>
