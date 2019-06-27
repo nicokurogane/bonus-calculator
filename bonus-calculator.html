@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="bonus.css">
+    <title>Bonus Exercise</title>
+</head>
+
+<body>
+    <div class="calculator-container">
+        <h1>Bonus Calculator</h1>
+        <h6>Enter your salary, worked years and worked days to find out your bonus!</h6>
+        <form id='bonus-form'>
+            <div class="form-row">
+                <div class="form-component form-group">
+                    <input type="number" name="salary" id="salary" placeholder="Salary">
+                    <span class="hide-message salary-invalid">Salary must be greater than zero</span>
+                </div>
+                <div class="form-component form-group">
+                    <input type="number" name="years" id="years" placeholder="Years">
+                    <span class="hide-message years-invalid">years must be greater than zero</span>
+                </div>
+                <div class="form-component form-group">
+                    <input type="number" name="days" id="days" placeholder="Days">
+                    <span class="hide-message days-invalid">Salary must be greater than zero and less than 365</span>
+                </div>
+            </div>
+            <input type="submit" class="btn btn-primary btn-submit" value="Calculate">
+        </form>
+    </div>
+    <div id='result-container' class="answer-container">
+
+    </div>
+
+    <script src="bonus.js"></script>
+</body>
+
+</html>

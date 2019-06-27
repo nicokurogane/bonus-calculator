@@ -40,9 +40,46 @@ function showCalculation(calculatedBonus) {
     resultContainer.removeChild(resultContainer.firstChild);
     resultContainer.appendChild(div);
 }
+
 function validateInput(salary, years, days) {
 
+    let numberOfInvalid = 0;
+    let inputSalary =  document.getElementById('salary');
+    let inputYears =  document.getElementById('years');
+    let inputDays =  document.getElementById('days');
+    let salaryMessage = document.getElementsByClassName('salary-invalid')[0];
+    let yearsMessage = document.getElementsByClassName('years-invalid')[0];
+    let daysMessage = document.getElementsByClassName('days-invalid')[0];
 
 
-    return true;
+    inputSalary.classList.remove('invalid-input');
+    inputYears.classList.remove('invalid-input');
+    inputDays.classList.remove('invalid-input');
+
+    salaryMessage.classList.add('hide-message');
+    yearsMessage.classList.add('hide-message');
+    daysMessage.classList.add('hide-message');
+    
+    if (salary <= 0 || salary === '') {
+        //    alert('Salary must be greater than zero');
+        document.getElementById('salary').classList.add('invalid-input');
+        salaryMessage.classList.remove('hide-message');
+        numberOfInvalid++;
+    }
+
+    console.log(years);
+    if (years < 0 || years === '') {
+        document.getElementById('years').classList.add('invalid-input');
+        yearsMessage.classList.remove('hide-message');
+        numberOfInvalid++;
+    }
+
+    if (days < 0 || days > 365 || days === '') {
+        //    alert('Days must be greater than zero and less than 365');
+        document.getElementById('days').classList.add('invalid-input');
+        daysMessage .classList.remove('hide-message');
+        numberOfInvalid++;
+    }
+
+   return numberOfInvalid > 0 ? false: true;
 }
